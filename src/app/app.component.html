@@ -29,7 +29,7 @@
         </div>
         <p *ngIf="!userData.valid && userData.touched">User Data is invalid!...</p>
         <div class="form-group">
-          <label for="secret">Secret Questions</label>
+          <label for="secret" name="secretQuestion">Secret Questions</label>
           <select id="secret" class="form-control" ngModel name="secret">
             <option value="pet">Your first Pet?</option>
             <option value="teacher">Your first teacher?</option>
@@ -52,5 +52,8 @@
         <button [disabled]="!f.valid" class="btn btn-primary" type="submit">Submit</button>
       </form>
     </div>
+  </div>
+  <div>
+    <p >{{user.username}}</p>
   </div>
 </div>
